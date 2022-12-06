@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-// 为了方便测试
 const path = require("path");
 const program = require("commander");
 const chalk = require("chalk");
@@ -7,6 +6,7 @@ const inquirer = require("inquirer");
 const ora = require("ora");
 const validTypes = ["react", "vue"];
 const fs = require("fs-extra");
+const figlet = require('figlet');
 
 program
   .command("create <project-name>") // 增加创建指令
@@ -29,7 +29,7 @@ program
 program.on("--help", function () {
   console.log(
     "\r\n" +
-      figlet.textSync("void-cli", {
+      figlet.textSync("voidcli", {
         font: "3D-ASCII",
         horizontalLayout: "default",
         verticalLayout: "default",
@@ -41,16 +41,16 @@ program.on("--help", function () {
   console.log();
   console.log(
     `Run ${chalk.cyan(
-      "zc-cli <command> --help"
+      "void-cli <command> --help"
     )} for detailed usage of given command.`
   );
   console.log();
 });
 
 program
-  .name("zc-cli")
+  .name("void-cli")
   .usage(`<command> [option]`)
-  .version(`zc-cli ${require("../package.json").version}`);
+  .version(`void-cli ${require("../package.json").version}`);
 
 // 解析用户执行时输入的参数
 // process.argv 是 nodejs 提供的属性
