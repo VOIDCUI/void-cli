@@ -2,10 +2,6 @@
 const path = require("path");
 const program = require("commander");
 const chalk = require("chalk");
-const inquirer = require("inquirer");
-const ora = require("ora");
-const validTypes = ["react", "vue"];
-const fs = require("fs-extra");
 const figlet = require('figlet');
 
 program
@@ -33,7 +29,7 @@ program.on("--help", function () {
         font: "3D-ASCII",
         horizontalLayout: "default",
         verticalLayout: "default",
-        width: 80,
+        width: 100,
         whitespaceBreak: true,
       })
   );
@@ -41,7 +37,7 @@ program.on("--help", function () {
   console.log();
   console.log(
     `Run ${chalk.cyan(
-      "void-cli <command> --help"
+      "vc <command> --help"
     )} for detailed usage of given command.`
   );
   console.log();

@@ -4,14 +4,24 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "brick": "bin/index.js"
+    "vc": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  
+  "keywords": [
+    "void-cli",
+    "vc",
+    "脚手架",
+	"模版"
+  ],
+  "author": "voidcui",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2",
     "chalk": "4.0.0",
